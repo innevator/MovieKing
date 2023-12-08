@@ -8,32 +8,28 @@
 import XCTest
 import MovieFeature
 
-struct Movie: Equatable {
+struct Movie: Hashable {
     let name: String
-    
-    static func == (lhs: Self, rhs: Self) -> Bool {
-        return lhs.name == rhs.name
-    }
 }
 
 protocol MovieService {
     func loadMovies(completion: (Result<[Movie], Error>) -> Void)
 }
 
-struct MovieAPIService: MovieService {
-    let movies: [Movie]
+struct MovieAPIServiceStub: MovieService {
+    let testcase: (Result<[Movie], Error>)
     
     func loadMovies(completion: (Result<[Movie], Error>) -> Void) {
-        completion(.success(movies))
+        completion(testcase)
     }
 }
 
 final class MovieFeatureTests: XCTestCase {
     
-    func test_loadMovies() {
+    func test_loadMovies_success() {
         var getMovies: [Movie] = []
         let testMovies = [Movie(name: "Movie1"), Movie(name: "Movie2")]
-        let service = MovieAPIService(movies: testMovies)
+        let service = MovieAPIServiceStub(testcase: .success(testMovies))
         
         service.loadMovies { result in
             switch result {
@@ -45,5 +41,22 @@ final class MovieFeatureTests: XCTestCase {
         }
         
         XCTAssertEqual(getMovies, testMovies)
+    }
+    
+    func test_loadMovies_failed() {
+        var testError: Error?
+        let error = NSError(domain: "Error", code: 0)
+        let service = MovieAPIServiceStub(testcase: .failure(error))
+        
+        service.loadMovies { result in
+            switch result {
+            case .success(_):
+                break
+            case .failure(let error):
+                testError = error
+            }
+        }
+        
+        XCTAssertNotNil(testError)
     }
 }
