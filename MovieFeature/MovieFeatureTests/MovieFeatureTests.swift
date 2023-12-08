@@ -32,11 +32,8 @@ final class MovieFeatureTests: XCTestCase {
         let service = MovieAPIServiceStub(testcase: .success(testMovies))
         
         service.loadMovies { result in
-            switch result {
-            case .success(let movies):
+            if case let .success(movies) = result {
                 getMovies = movies
-            case .failure(_):
-                break
             }
         }
         
@@ -49,10 +46,7 @@ final class MovieFeatureTests: XCTestCase {
         let service = MovieAPIServiceStub(testcase: .failure(error))
         
         service.loadMovies { result in
-            switch result {
-            case .success(_):
-                break
-            case .failure(let error):
+            if case let .failure(error) = result {
                 testError = error
             }
         }
