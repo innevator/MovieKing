@@ -8,5 +8,5 @@
 import Foundation
 
 public protocol MovieService {
-    func loadMovies(completion: (Result<[Movie], Error>) -> Void)
+    func loadMovies(completion: @escaping (Result<[Movie], Error>) -> Void)
 }
