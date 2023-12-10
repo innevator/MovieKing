@@ -8,14 +8,6 @@
 import XCTest
 import MovieFeature
 
-struct Movie: Hashable {
-    let name: String
-}
-
-protocol MovieService {
-    func loadMovies(completion: (Result<[Movie], Error>) -> Void)
-}
-
 struct MovieAPIServiceStub: MovieService {
     let testcase: (Result<[Movie], Error>)
     
