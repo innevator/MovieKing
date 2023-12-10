@@ -19,6 +19,7 @@
 		FE15A8C82B26055D0051B0B5 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE15A8C72B26055D0051B0B5 /* Movie.swift */; };
 		FE15A8CA2B2605ED0051B0B5 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE15A8C92B2605ED0051B0B5 /* MovieViewModel.swift */; };
 		FE15A8CC2B26062A0051B0B5 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE15A8CB2B26062A0051B0B5 /* MovieService.swift */; };
+		FE15A8D12B260C6D0051B0B5 /* Kanna in Frameworks */ = {isa = PBXBuildFile; productRef = FE15A8D02B260C6D0051B0B5 /* Kanna */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +69,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE15A8D12B260C6D0051B0B5 /* Kanna in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +207,9 @@
 			dependencies = (
 			);
 			name = MovieKing;
+			packageProductDependencies = (
+				FE15A8D02B260C6D0051B0B5 /* Kanna */,
+			);
 			productName = MovieKing;
 			productReference = FE15A8B42B2370C60051B0B5 /* MovieKing.app */;
 			productType = "com.apple.product-type.application";
@@ -240,6 +245,9 @@
 				Base,
 			);
 			mainGroup = FE15A88E2B2370AB0051B0B5;
+			packageReferences = (
+				FE15A8CF2B260C6D0051B0B5 /* XCRemoteSwiftPackageReference "Kanna" */,
+			);
 			productRefGroup = FE15A8992B2370AB0051B0B5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -638,6 +646,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FE15A8CF2B260C6D0051B0B5 /* XCRemoteSwiftPackageReference "Kanna" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/tid-kijyun/Kanna";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.2.7;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FE15A8D02B260C6D0051B0B5 /* Kanna */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FE15A8CF2B260C6D0051B0B5 /* XCRemoteSwiftPackageReference "Kanna" */;
+			productName = Kanna;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FE15A88F2B2370AB0051B0B5 /* Project object */;
 }
