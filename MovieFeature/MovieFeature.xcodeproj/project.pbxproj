@@ -20,6 +20,9 @@
 		FE15A8CA2B2605ED0051B0B5 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE15A8C92B2605ED0051B0B5 /* MovieViewModel.swift */; };
 		FE15A8CC2B26062A0051B0B5 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE15A8CB2B26062A0051B0B5 /* MovieService.swift */; };
 		FE15A8D12B260C6D0051B0B5 /* Kanna in Frameworks */ = {isa = PBXBuildFile; productRef = FE15A8D02B260C6D0051B0B5 /* Kanna */; };
+		FE15A8D32B260D320051B0B5 /* ShowTimeMovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE15A8D22B260D320051B0B5 /* ShowTimeMovieService.swift */; };
+		FE15A8D52B260E680051B0B5 /* MovieFeature.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE15A8982B2370AB0051B0B5 /* MovieFeature.framework */; };
+		FE15A8D62B260E680051B0B5 /* MovieFeature.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = FE15A8982B2370AB0051B0B5 /* MovieFeature.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -30,7 +33,28 @@
 			remoteGlobalIDString = FE15A8972B2370AB0051B0B5;
 			remoteInfo = MovieFeature;
 		};
+		FE15A8D72B260E680051B0B5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FE15A88F2B2370AB0051B0B5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FE15A8972B2370AB0051B0B5;
+			remoteInfo = MovieFeature;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		FE15A8D92B260E690051B0B5 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				FE15A8D62B260E680051B0B5 /* MovieFeature.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		FE15A8982B2370AB0051B0B5 /* MovieFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MovieFeature.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +71,7 @@
 		FE15A8C72B26055D0051B0B5 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		FE15A8C92B2605ED0051B0B5 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		FE15A8CB2B26062A0051B0B5 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
+		FE15A8D22B260D320051B0B5 /* ShowTimeMovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShowTimeMovieService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +94,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FE15A8D52B260E680051B0B5 /* MovieFeature.framework in Frameworks */,
 				FE15A8D12B260C6D0051B0B5 /* Kanna in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -83,6 +109,7 @@
 				FE15A8A42B2370AB0051B0B5 /* MovieFeatureTests */,
 				FE15A8B52B2370C60051B0B5 /* MovieKing */,
 				FE15A8992B2370AB0051B0B5 /* Products */,
+				FE15A8D42B260E680051B0B5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -124,6 +151,7 @@
 				FE15A8B82B2370C60051B0B5 /* ContentView.swift */,
 				FE15A8BA2B2370C60051B0B5 /* Assets.xcassets */,
 				FE15A8BC2B2370C60051B0B5 /* Preview Content */,
+				FE15A8D22B260D320051B0B5 /* ShowTimeMovieService.swift */,
 			);
 			path = MovieKing;
 			sourceTree = "<group>";
@@ -142,6 +170,13 @@
 				FE15A8C52B26036C0051B0B5 /* Movie_Helper.swift */,
 			);
 			path = Helper;
+			sourceTree = "<group>";
+		};
+		FE15A8D42B260E680051B0B5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,10 +236,12 @@
 				FE15A8B02B2370C60051B0B5 /* Sources */,
 				FE15A8B12B2370C60051B0B5 /* Frameworks */,
 				FE15A8B22B2370C60051B0B5 /* Resources */,
+				FE15A8D92B260E690051B0B5 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				FE15A8D82B260E680051B0B5 /* PBXTargetDependency */,
 			);
 			name = MovieKing;
 			packageProductDependencies = (
@@ -311,6 +348,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FE15A8B92B2370C60051B0B5 /* ContentView.swift in Sources */,
+				FE15A8D32B260D320051B0B5 /* ShowTimeMovieService.swift in Sources */,
 				FE15A8B72B2370C60051B0B5 /* MovieKingApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -322,6 +360,11 @@
 			isa = PBXTargetDependency;
 			target = FE15A8972B2370AB0051B0B5 /* MovieFeature */;
 			targetProxy = FE15A8A22B2370AB0051B0B5 /* PBXContainerItemProxy */;
+		};
+		FE15A8D82B260E680051B0B5 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FE15A8972B2370AB0051B0B5 /* MovieFeature */;
+			targetProxy = FE15A8D72B260E680051B0B5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
