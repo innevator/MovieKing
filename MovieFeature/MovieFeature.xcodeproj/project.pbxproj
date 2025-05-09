@@ -24,10 +24,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		FE15A8982B2370AB0051B0B5 /* MovieFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MovieFeature.framework; path = "/Users/hongzonghong/Desktop/MovieKing/MovieFeature/build/Debug-iphoneos/MovieFeature.framework"; sourceTree = "<absolute>"; };
-		FE15A8A02B2370AB0051B0B5 /* MovieFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MovieFeatureTests.xctest; path = "/Users/hongzonghong/Desktop/MovieKing/MovieFeature/build/Debug-iphoneos/MovieFeatureTests.xctest"; sourceTree = "<absolute>"; };
-		FEAB24472DCDE89700F6126B /* MovieKingiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieKingiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		FEAB24482DCDE89A00F6126B /* MovieKingiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MovieKingiOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FEAB24472DCDE89700F6126B /* MovieKingiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; name = MovieKingiOS.app; path = "/Users/hongzonghong/Desktop/MovieKing/MovieFeature/build/Debug-iphoneos/MovieKingiOS.app"; sourceTree = "<absolute>"; };
+		FEAB24482DCDE89A00F6126B /* MovieKingiOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MovieKingiOSTests.xctest; path = "/Users/hongzonghong/Desktop/MovieKing/MovieFeature/build/Debug-iphoneos/MovieKingiOS.app/PlugIns/MovieKingiOSTests.xctest"; sourceTree = "<absolute>"; };
+		FEAB244E2DCDFB3100F6126B /* MovieFeature.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = MovieFeature.framework; path = "/Users/hongzonghong/Desktop/MovieKing/MovieFeature/build/Debug-iphoneos/MovieFeature.framework"; sourceTree = "<absolute>"; };
+		FEAB244F2DCDFB3100F6126B /* MovieFeatureTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; name = MovieFeatureTests.xctest; path = "/Users/hongzonghong/Desktop/MovieKing/MovieFeature/build/Debug-iphoneos/MovieFeatureTests.xctest"; sourceTree = "<absolute>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
@@ -86,8 +86,6 @@
 				FEAB24132DCDE6A300F6126B /* MovieFeatureTests */,
 				FEAB23D22DCDE67800F6126B /* MovieKingiOS */,
 				FEAB23E32DCDE67A00F6126B /* MovieKingiOSTests */,
-				FEAB24472DCDE89700F6126B /* MovieKingiOS.app */,
-				FEAB24482DCDE89A00F6126B /* MovieKingiOSTests.xctest */,
 			);
 			sourceTree = "<group>";
 		};
@@ -122,7 +120,7 @@
 			);
 			name = MovieFeature;
 			productName = MovieFeature;
-			productReference = FE15A8982B2370AB0051B0B5 /* MovieFeature.framework */;
+			productReference = FEAB244E2DCDFB3100F6126B /* MovieFeature.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		FE15A89F2B2370AB0051B0B5 /* MovieFeatureTests */ = {
@@ -143,7 +141,7 @@
 			);
 			name = MovieFeatureTests;
 			productName = MovieFeatureTests;
-			productReference = FE15A8A02B2370AB0051B0B5 /* MovieFeatureTests.xctest */;
+			productReference = FEAB244F2DCDFB3100F6126B /* MovieFeatureTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		FEAB23D02DCDE67800F6126B /* MovieKingiOS */ = {
